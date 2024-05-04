@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div id="countUpdate"></div>
+    </div>
+
+    <script>
+      const targetDate = new Date("2025-01-01T00:00:00");
+
+      function updateCountDown() {
+        const currTime = new Date();
+
+        const timeDiffer = targetDate - currTime;
+
+        const days = Math.floor(timeDiffer / (1000 * 60 * 60 * 24));
+        const hour = Math.floor(
+          (timeDiffer % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+
+        const min = Math.floor((timeDiffer % (1000 * 60 * 60)) / (1000 * 60));
+
+        const sec = Math.floor((timeDiffer % (1000 * 60)) / 1000);
+
+        const countUpdate = document.getElementById("countUpdate");
+        countUpdate.innerHTML = `${days}D ${hour}H : ${min}M : ${sec}S`;
+
+        setTimeout(updateCountDown, 1000);
+      }
+
+      updateCountDown();
+    </script>
+  </body>
+</html>

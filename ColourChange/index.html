@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    div {
+      margin-top: 50px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    span {
+      height: 200px;
+      width: 200px;
+      border: 2px solid black;
+    }
+
+    #grey {
+      background-color: grey;
+    }
+
+    #white {
+      background-color: white;
+    }
+
+    #yellow {
+      background-color: yellow;
+    }
+
+    #blue {
+      background-color: blue;
+    }
+
+    .title {
+      display: flex;
+      justify-content: center;
+      margin: 20px auto;
+    }
+  </style>
+  <body>
+    <h2 class="title">Click on the box to change the background colour.</h2>
+    <div>
+      <span id="grey"></span>
+      <span id="white"></span>
+      <span id="yellow"></span>
+      <span id="blue"></span>
+    </div>
+
+    <script>
+      const buttons = document.querySelectorAll("span");
+      const body = document.querySelector("body");
+
+      console.log(buttons);
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          console.log(e);
+          console.log(e.target.id);
+          body.style.backgroundColor = e.target.id;
+        });
+      });
+    </script>
+  </body>
+</html>

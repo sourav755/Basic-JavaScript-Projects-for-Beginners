@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess Number</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <form action="">
+        <label for="guessField" id="guess">Guess a Number</label>
+        <input type="text" id="guessField" />
+        <input type="submit" id="subtn" value="Submit Guess" />
+      </form>
+    </div>
+
+    <div class="center-element">
+      <div class="resultParas">
+        <p>Previous Guesses: <span class="guesses"></span></p>
+        <p>Guesses Remaining: <span class="guessLeft">10</span></p>
+      </div>
+    </div>
+
+    <div class="outcomes">
+      <p class="result"></p>
+    </div>
+
+    <div class="resetbtn">
+      <input type="reset" value="Retry" id="rst" />
+    </div>
+
+    <script src="script.js"></script>
+    <!-- <script src="script1.js"></script> -->
+  </body>
+</html>
