@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: azure;
+}
+
+.para{
+    display: flex;
+    justify-content: center;
+    margin-top: 34px;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    gap: 34px;
+    margin-top: 45px;
+}
+
+button{
+    padding: 10px;
+    font-size: 23px;
+    font-weight: 600;
+    border-radius: 7px;
+}
+
+.box{
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    
+}
+
+.box-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
