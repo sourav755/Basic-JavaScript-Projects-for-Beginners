@@ -13,15 +13,17 @@
   <script>
     const start = document.querySelector("#start");
     const stop = document.querySelector("#stop");
+    let intervalId;
 
     const startInterval = () => {
-      const intervalId = setInterval(() => {
+      intervalId = setInterval(() => {
         console.log("Hello " + Date.now());
       }, 1000);
     };
 
     const stopInterval = () => {
       clearInterval(intervalId);
+      intervalId = null;
       console.log("Stopped");
     };
 
